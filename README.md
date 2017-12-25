@@ -1,5 +1,5 @@
-#A Role for adding and removing users in Mysql instances.
-##Example playbook:
+# A Role for adding and removing users in Mysql instances.
+## Example playbook:
 ```
 ---
 - name: mysql-user-operations
