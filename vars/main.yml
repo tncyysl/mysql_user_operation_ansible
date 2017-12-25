@@ -1,0 +1,8 @@
+---
+#remove user
+remove_userinfo:
+  - {remove_name: '{{removing_name}}', remove_host_name: yes, remove_state: absent}
+
+#add user
+add_userinfo:
+  - {add_name: '{{adding_name}}', add_passwd: '{{adding_password}}', add_host: '{{adding_host}}', add_priv: '{{adding_priv}}'}

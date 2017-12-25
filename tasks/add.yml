@@ -1,0 +1,9 @@
+---
+- name: creating the user
+  mysql_user:
+    name: '{{item.add_name}}'
+    password: '{{item.add_passwd}}'
+    host: '{{item.add_host}}'
+    priv: '{{item.add_priv}}'
+  with_items:
+    - "{{ add_userinfo }}"

@@ -1,0 +1,8 @@
+---
+- name: removing the user
+  mysql_user:  
+    name: '{{item.remove_name}}'
+    host_all: '{{item.remove_host_name}}'
+    state: '{{item.remove_state}}'
+  with_items:
+    - "{{remove_userinfo}}"   

@@ -1,0 +1,13 @@
+---
+- include: install.yml
+  tags:
+    - add
+    - remove
+
+- include: add.yml
+  tags:
+    - add
+
+#- include: remove.yml
+#  tags:
+#    - remove

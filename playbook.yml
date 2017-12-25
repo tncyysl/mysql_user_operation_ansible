@@ -1,0 +1,22 @@
+#---
+#- hosts: google
+#  remote_user: tuncay
+#  become: yes
+#  become_user: root
+#  roles:
+#   - role: ansible-elasticsearch
+
+
+---
+- name: mysql-user-operations
+  hosts: mysqlsearch
+  remote_user: tuncay.uysal
+  become: yes
+  roles:
+    - {role: ansible-mysql-operations}
+  vars:
+    adding_name: 'test'
+    adding_password: 'test123'
+    adding_host: '%'
+    adding_priv: 'test.*:SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,EVENT'
+   #removing_name: 'jackie.chan'
